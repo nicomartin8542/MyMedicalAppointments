@@ -1,23 +1,27 @@
 public class Doctor {
 
     //Atributos
-    int id;
+    static int id = 0; //Autoincrement
     String name;
     String speciality;
 
     //Constructor
     Doctor(){
-        System.out.printf("Construyendo el objeto Doctor");
+        System.out.println("Construyendo el objeto Doctor");
+        id++;
     }
 
     //Otro constructor
     Doctor(String name) {
-        System.out.printf("El otro Dorctor es: " + name);
+        System.out.println("El otro Dorctor es: " + name);
     }
-
 
     //Comportamientos
     public void  showName (){
-        System.out.printf("\nEl nombre del Doctor es: " + name);
+        System.out.println("El nombre del Doctor es: " + name);
+    }
+
+    public void  showId() {
+        System.out.println("ID Doctor" + id);
     }
 }
