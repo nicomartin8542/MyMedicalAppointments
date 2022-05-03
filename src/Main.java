@@ -1,16 +1,20 @@
+import java.util.Date;
+
+import static ui.UIMenu.*;
+
 public class Main {
     public static void main(String[] args) {
-        Doctor myDoctor = new Doctor();
-        myDoctor.name = "Nicolas";
-        myDoctor.showName();
-        myDoctor.showId();
+        //showMenu();
+        Doctor myDoctor = new Doctor("Nicolas", "Cardiologo");
+        myDoctor.addAviableAppointment(new Date(), "4pm");
+        System.out.println(myDoctor.getAviableAppointments());
 
-        Doctor myDoctorAnn = new Doctor();
-        myDoctor.showId();
-        System.out.println(Doctor.id);
+        //System.out.println(myDoctor.name);
+        //System.out.println(myDoctor.speciality);
 
     }
 }
+
 
 
 
