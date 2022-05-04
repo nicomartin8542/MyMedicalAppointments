@@ -9,7 +9,15 @@ public class Main {
         myDoctor.addAviableAppointment(new Date(), "4pm");
         System.out.println(myDoctor.getAviableAppointments());
 
-        //System.out.println(myDoctor.name);
+        Patient patient = new Patient("Nicolas", "nicomartin854@gmail.com");
+
+       patient.setWeight(68.00);
+        System.out.println(patient.getWeight());
+
+        patient.setPhoneNumber("12345678");
+        System.out.println(patient.getPhoneNumber());
+
+       //System.out.println(myDoctor.name);
         //System.out.println(myDoctor.speciality);
 
     }
