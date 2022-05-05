@@ -19,12 +19,9 @@ public class Main {
        patient.setWeight(68.00);
         System.out.println(patient.getWeight());
 
-        patient.setPhoneNumber("12345678");
-        System.out.println(patient.getPhoneNumber());
-
-         //System.out.println(myDoctor.name);
-         //System.out.println(myDoctor.speciality);
-
+        patient.setAddress("Groeber 1540");
+        patient.setPhoneNumber("38049446");
+        System.out.println(patient.toString());
     }
 }
 

@@ -7,6 +7,8 @@ public class Patient extends  User{
     //Constructor
     Patient (String name, String email) {
         super(name, email);
+        //mas instrucciones  para sobreescribir un constructor
+
     }
 
     public String getBirthday() {
@@ -40,4 +42,10 @@ public class Patient extends  User{
     public void setBlood(String blood) {
         this.blood = blood;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Age: " + birthday + " Weigth: " + weight +
+                "\n Heigth: " + heigt + " Blood: " + blood;
+     }
 }
