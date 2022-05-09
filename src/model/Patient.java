@@ -1,14 +1,15 @@
-public class Patient extends  User{
+package model;
+
+public class Patient extends  User {
     private String birthday;
     private double weight;
     private double heigt;
     private String blood;
 
     //Constructor
-    Patient (String name, String email) {
+    public Patient(String name, String email) {
         super(name, email);
         //mas instrucciones  para sobreescribir un constructor
-
     }
 
     public String getBirthday() {
@@ -48,4 +49,10 @@ public class Patient extends  User{
         return super.toString() + "Age: " + birthday + " Weigth: " + weight +
                 "\n Heigth: " + heigt + " Blood: " + blood;
      }
+
+    @Override
+    public void ShowDataUser() {
+        System.out.println("Paciente");
+        System.out.println("Historial completo de paciente.");
+    }
 }

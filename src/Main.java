@@ -1,6 +1,9 @@
-import java.util.Date;
+import model.Doctor;
+import model.Nurse;
+import model.Patient;
+import model.User;
 
-import static ui.UIMenu.*;
+import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,12 +19,19 @@ public class Main {
 
         Patient patient = new Patient("Nicolas", "nicomartin854@gmail.com");
 
-       patient.setWeight(68.00);
-        System.out.println(patient.getWeight());
+        User user = new Doctor("Nicolas", "nicomartin854gmail.com");
+        user.ShowDataUser();
+        User userNurse = new Nurse("Rocio", "rocio@gmail.com");
+        userNurse.ShowDataUser();
+        User userP = new Patient("Juan", "juan@gmail.com");
+        userP.ShowDataUser();
 
-        patient.setAddress("Groeber 1540");
-        patient.setPhoneNumber("38049446");
-        System.out.println(patient.toString());
+        //patient.setWeight(68.00);
+        //System.out.println(patient.getWeight());
+        //
+        //patient.setAddress("Groeber 1540");
+        //patient.setPhoneNumber("38049446");
+        //System.out.println(patient.toString());
     }
 }
 

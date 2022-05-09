@@ -1,3 +1,5 @@
+package model;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -11,9 +13,15 @@ public class Doctor extends User{
     private String time;
 
     //constructor
-    Doctor(String name, String email) {
+    public Doctor(String name, String email) {
         super(name, email);
         this.speciality = speciality;
+    }
+
+    @Override
+    public void ShowDataUser() {
+        System.out.println("Hospital: Cruz roja");
+        System.out.println("Departamente: oncologi");
     }
 
     //Comportamientos/Metodos
