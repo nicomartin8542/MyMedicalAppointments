@@ -1,5 +1,7 @@
 package model;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -31,7 +33,9 @@ public class Doctor extends User{
 
 
     //Comportamientos/Metodos
-    public void addAviableAppointment (Date date, String time){
+    public void addAviableAppointment (String date, String time){
+
+
         aviableAppointments.add(new Doctor.AviableAppointment(date, time));
     }
 
@@ -46,13 +50,21 @@ public class Doctor extends User{
         private Date date;
         private String time;
 
-        public AviableAppointment(Date date, String time) {
-            this.date = date;
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+        public AviableAppointment(String date, String time) {
+            try {
+                this.date = format.parse(date);
+            } catch (ParseException e) {
+                throw new RuntimeException(e);
+            }
             this.time = time;
         }
 
         public Date getDate() {
             return date;
+        }
+        public String getDate(String date) {
+            return format.format(date);
         }
 
         public void setDate(Date date) {
